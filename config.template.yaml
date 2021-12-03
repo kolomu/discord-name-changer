@@ -1,0 +1,7 @@
+token: 'YOUR_DISCORD_TOKEN'
+channel_id: 'CHANNEL_ID'
+roles: # the longest name first (e.g. Jon Doe, then Jon or Doe for aliases)
+   scrum-master: ["Name1"]
+   product-owner: ["Name2"]
+   dev1: ["Name3", "Nickname3"]
+   dev2: ["Name4"]
