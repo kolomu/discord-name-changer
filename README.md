@@ -3,15 +3,18 @@ Exports Discord chat logs to a csv-file, then using that csv file for making nam
 
 This project is based on [DiscordChatExporter](https://github.com/Tyrrrz/DiscordChatExporter).
 
-Therefore it also requires a `.NET Runtime` which has to be installed manually. 
+Therefore it also requires a **.NET Runtime** which has to be installed manually. 
 - [.NET Core v3.1 Runtime for **Windows x64**](https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-desktop-3.1.0-windows-x64-installer)
 - [.NET Core v3.1 Runtime for **Windows x86**](https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-desktop-3.1.0-windows-x86-installer)
 - [.NET Core v3.1 Runtime for **macOS x64**](https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-3.1.0-macos-x64-installer)
 - [.NET Core v3.1 Runtime for **Linux**](https://docs.microsoft.com/en-us/dotnet/core/install/linux) (find your distro)
 
+## Installing the python requirements
+`pip install -r requirements.txt`
 
+## Getting required information
 You need to get your `Discord Token` and a `Channel ID` to use this tool.
-Rename `config.template.yaml` to `config.yaml` and insert there the Discord Token and Channel ID.
+Rename `config.template.yaml` to `config.yaml` and insert the Discord Token and Channel ID.
 This file is also responsible for the replacements pairs. 
 
 ### How to get the Discord Token
@@ -34,5 +37,5 @@ Receive the channel token in the browser version of discord.
 
 ![Channel ID](./img/channel_id.png)
 
-### Run the App
+## Run the App
 `python3 app.py`
