@@ -44,17 +44,16 @@ def main():
     config = read_config()
     channel_id = config['channel_id']
     token = config['token']
-    current_dir = os.getcwd()
 
-    with open("logs/docker-output.log", "a") as output:
+    with open("logs/DiscordChatExporterCLI.log", "a") as output:
         subprocess.call(
-            f"docker run --rm -v {current_dir}/discord_chats:/app/out tyrrrz/discordchatexporter:stable export -t {token} -c {channel_id} -f CSV", 
-            shell=True, 
-            stdout=output, 
+            f"DiscordChatExporter\\DiscordChatExporter.Cli.exe export -o ./discord_chats -t {token} -c {channel_id} -f CSV",
+            shell=True,
+            stdout=output,
             stderr=output
         )
         df = read_csv()
         df = replace_names(df)
-        df.to_csv(f'{RESULT_PATH}/{channel_id}.csv', index=False)
+        df.to_csv(f'{RESULT_PATH}{channel_id}.csv', index=False)
 
 main()

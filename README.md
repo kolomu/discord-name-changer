@@ -4,10 +4,7 @@ Exports Discord chat logs to a csv-file, then using that csv file for making nam
 This project is based on [DiscordChatExporter](https://github.com/Tyrrrz/DiscordChatExporter).
 
 Therefore it also requires a **.NET Runtime** which has to be installed manually. 
-- [.NET Core v3.1 Runtime for **Windows x64**](https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-desktop-3.1.0-windows-x64-installer)
-- [.NET Core v3.1 Runtime for **Windows x86**](https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-desktop-3.1.0-windows-x86-installer)
-- [.NET Core v3.1 Runtime for **macOS x64**](https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-3.1.0-macos-x64-installer)
-- [.NET Core v3.1 Runtime for **Linux**](https://docs.microsoft.com/en-us/dotnet/core/install/linux) (find your distro)
+  - [.NET v6.0 Runtime for **Windows x64**](https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-desktop-6.0.0-windows-x64-installer)
 
 ## Installing the python requirements
 `pip install -r requirements.txt`
