@@ -35,4 +35,4 @@ Receive the channel token in the browser version of discord.
 ![Channel ID](./img/channel_id.png)
 
 ## Run the App
-`python3 app.py`
+`python app.py`
