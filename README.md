@@ -36,3 +36,7 @@ Receive the channel token in the browser version of discord.
 
 ## Run the App
 `python app.py`
+- this will look in the `config.yaml` for the `channelID` to download the messages via the DiscordChatExporter
+## Run the App with a CSV-FILE
+`python app.py --csv "C:\my.csv"`
+- this will look at the specified path for the CSV file and replaces the names based on the config.yaml.
