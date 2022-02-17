@@ -30,10 +30,10 @@ def read_csv(channel_id="", path=""):
         return pd.read_csv(f'{found_files[0]}', sep=',')
     else:
         found_files = glob.glob(f"{path}")
-        return pd.read_csv(f'{found_files[0]}', sep=',')       
+        return pd.read_csv(f'{found_files[0]}', sep=';')       
 
 def replace_names(df):
-    df.drop(columns="AuthorID", inplace=True)
+    # df.drop(columns="Autor", inplace=True)
     roles = read_config()['roles'] # dictionary of key: list
     for role_item in roles.items():
         role = role_item[0]
@@ -41,9 +41,9 @@ def replace_names(df):
         for name in names_array:
             re_replace_author_content = re.compile(re.escape(name), re.IGNORECASE)
             re_remove_discord_tag = r"#\d{4}"
-            df['Content'].replace(to_replace=re_replace_author_content, value=f"{role}", inplace=True, regex=True)
-            df['Author'].replace(to_replace=re_replace_author_content, value=f"{role}", inplace=True, regex=True)
-            df['Author'].replace(to_replace=re_remove_discord_tag, value=f"", inplace=True, regex=True)
+            df['Inhalt'].replace(to_replace=re_replace_author_content, value=f"{role}", inplace=True, regex=True)
+            df['Autor'].replace(to_replace=re_replace_author_content, value=f"{role}", inplace=True, regex=True)
+            df['Autor'].replace(to_replace=re_remove_discord_tag, value=f"", inplace=True, regex=True)
     return df
 
 def main(): 
